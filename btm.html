@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listener</title>
+  <script>
+    window.onload = function() {
+      document.getElementById("btn").addEventListener("click", function() {
+        document.getElementById("description").style.color = "red";
+      });
+    };
+  </script>
+</head>
+<body>
+  <p id="description">This is the best.</p>
+  <button id="btn">Click</button>
+</body>
+</html>

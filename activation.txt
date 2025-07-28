@@ -1,0 +1,9 @@
+irm https://get.activated.win | iex
+
+
+open powershell 
+
+past this command   (irm https://get.activated.win | iex)
+
+choose 2 and 1
+

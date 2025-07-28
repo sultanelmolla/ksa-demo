@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+  <style>
+    /* ID selector to style the result div */
+    #result {
+      font-family: Arial;
+      font-size: 18px;
+      color: blue;
+      font-style: italic;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div id="result"></div>
+
+<script>
+function calculateBMI() {
+  var weight = parseFloat(prompt("Enter your weight in kilograms:"));
+  var height = parseFloat(prompt("Enter your height in meters:"));
+
+  if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+    document.getElementById("result").innerHTML = "Invalid input. Please enter positive numbers.";
+    return;
+  }
+
+  var bmi = weight / (height * height);
+  var message = "Your BMI is " + bmi.toFixed(2) + ". ";
+  
+  if (bmi < 16) {
+    message += "Category: Severely Underweight.";
+    alert("Warning: You are in the danger zone.");
+  } else if (bmi >= 16 && bmi < 18.5) {
+    message += "Category: Underweight.";
+  } else if (bmi >= 18.5 && bmi < 25) {
+    message += "Category: Normal weight.";
+  } else if (bmi >= 25 && bmi < 30) {
+    message += "Category: Overweight.";
+  } else {
+    message += "Category: Obese.";
+    alert("Warning: You are in the danger zone.");
+  }
+
+  document.getElementById("result").innerHTML = message;
+}
+
+// Call the function when the page loads
+calculateBMI();
+</script>
+
+</body>
+</html>

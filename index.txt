@@ -1,0 +1,4 @@
+<figure>
+  <img src="SJF_Gantt.png" alt="Sales chart for 2025">
+  <figcaption>Figure 1: Annual Sales Growth</figcaption>
+</figure>
